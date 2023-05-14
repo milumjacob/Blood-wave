@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:noell/home.dart';
+import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -14,12 +14,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-              builder: (context) => const MyHomePage(
-                    title: 'gfg',
-                  )));
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => const LoginScreen()));
     });
   }
 
@@ -28,9 +24,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
         body: Center(
             child: Container(
-                color: const Color.fromARGB(255, 11, 100, 89),
+                color: const Color(0xff191970),
                 height: MediaQuery.of(context).size.height,
                 child: const Image(
-                    image: AssetImage("android/assets/image/logoblack.png")))));
+                    image: AssetImage("android/assets/image/logotrans.png")))));
   }
 }

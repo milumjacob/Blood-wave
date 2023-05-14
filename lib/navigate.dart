@@ -1,0 +1,67 @@
+import 'package:flutter/material.dart';
+import 'package:bloodwave/alerts.dart';
+import 'package:bloodwave/profile.dart';
+import 'package:bloodwave/drawer.dart';
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _currentIndex = 0;
+
+  static final List<Widget> _widgetoptions = <Widget>[
+    const Center(child: Text('home')),
+    const Center(child: Text('search')),
+    const MyApp(),
+    const ProfileScreen(),
+  ];
+  void _onitemtapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      endDrawer: const MyHeader(),
+      appBar: AppBar(
+        title: Text(widget.title),
+        backgroundColor: const Color(0xff191970),
+      ),
+      body: Center(
+        child: _widgetoptions[_currentIndex],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        iconSize: 30,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              backgroundColor: Color(0xff191970),
+              label: "home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              backgroundColor: Color(0xff191970),
+              label: "search"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notification_add),
+            backgroundColor: Color(0xff191970),
+            label: "alerts",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              backgroundColor: Color(0xff191970),
+              label: "profile"),
+        ],
+        onTap: _onitemtapped,
+      ),
+    );
+  }
+}
