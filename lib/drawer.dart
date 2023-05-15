@@ -1,3 +1,4 @@
+import 'package:bloodwave/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyHeader extends StatefulWidget {
@@ -13,8 +14,8 @@ class _MyHeaderState extends State<MyHeader> {
     return Drawer(
       child: ListView(
         padding: const EdgeInsets.all(0),
-        children: const [
-          DrawerHeader(
+        children: [
+          const DrawerHeader(
               decoration: BoxDecoration(color: Color(0xff191970)),
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Color(0xff191970)),
@@ -24,21 +25,26 @@ class _MyHeaderState extends State<MyHeader> {
                 ),
                 accountEmail: Text("Email"),
               )),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.bloodtype),
             title: Text(' Recent Donations '),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.edit),
             title: Text(' Edit Profile '),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.settings),
             title: Text(' Settings '),
           ),
           ListTile(
-            leading: Icon(Icons.logout),
-            title: Text('LogOut'),
+            leading: const Icon(Icons.logout),
+            onTap: () => Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => const LoginScreen(),
+              ),
+            ),
+            title: const Text('LogOut'),
           ),
         ],
       ),

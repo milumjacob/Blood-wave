@@ -27,6 +27,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 20,
             ),
+            bloodTextField(),
+            const SizedBox(
+              height: 20,
+            ),
             mobileTextField(),
             const SizedBox(
               height: 20,

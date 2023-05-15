@@ -1,3 +1,4 @@
+import 'package:bloodwave/home1.dart';
 import 'package:flutter/material.dart';
 import 'package:bloodwave/alerts.dart';
 import 'package:bloodwave/profile.dart';
@@ -16,8 +17,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
   static final List<Widget> _widgetoptions = <Widget>[
-    const Center(child: Text('home')),
-    const Center(child: Text('search')),
+    const MyHome(),
+    const Center(child: Text('add new')),
     const MyApp(),
     const ProfileScreen(),
   ];
@@ -47,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: Color(0xff191970),
               label: "home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: Icon(Icons.add),
               backgroundColor: Color(0xff191970),
-              label: "search"),
+              label: "add"),
           BottomNavigationBarItem(
             icon: Icon(Icons.notification_add),
             backgroundColor: Color(0xff191970),
