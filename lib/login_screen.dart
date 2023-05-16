@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
-                                  fontSize: 18,
+                                  fontSize: 20,
                                   color: Colors.white70),
                             ),
                           ),
@@ -134,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 style: TextStyle(
                                   decoration: TextDecoration.underline,
                                   color: Colors.white70,
-                                  fontSize: 15,
+                                  fontSize: 20,
                                 ),
                               )),
                         ],

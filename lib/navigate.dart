@@ -1,3 +1,4 @@
+import 'package:bloodwave/add.dart';
 import 'package:bloodwave/home1.dart';
 import 'package:flutter/material.dart';
 import 'package:bloodwave/alerts.dart';
@@ -18,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static final List<Widget> _widgetoptions = <Widget>[
     const MyHome(),
-    const Center(child: Text('add new')),
+    const AddNew(),
     const MyApp(),
     const ProfileScreen(),
   ];
