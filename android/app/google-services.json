@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237895875504",
+    "project_id": "bloodwave-e65f4",
+    "storage_bucket": "bloodwave-e65f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237895875504:android:9f4601dcb080778c73b475",
+        "android_client_info": {
+          "package_name": "com.example.noell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237895875504-s66dclk5dbgsrqhjfhdjn8p8rtvn1o80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBNTj1NHUWQCZTnarl7YcexGM-pc8vVMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237895875504-s66dclk5dbgsrqhjfhdjn8p8rtvn1o80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
