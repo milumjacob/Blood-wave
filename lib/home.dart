@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
                 height: 0.5,
-                color: Colors.black,
+                color: Color.fromARGB(255, 2, 0, 0),
               ),
             ),
             const SizedBox(
