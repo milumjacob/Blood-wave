@@ -1,7 +1,11 @@
 import 'package:bloodwave/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+ //Firebase.initializeApp(options: FirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
