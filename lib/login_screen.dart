@@ -14,12 +14,16 @@ class _LoginScreenState extends State<LoginScreen> {
   // Text controllers
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  String email = "";
+  String password = "";
 
   Future<void> logIn() async {
+    print(email);
+    print(password);
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim(),
+        email: email,
+        password: password,
       );
       // Navigate to the desired page after successful login
       Navigator.push(
@@ -74,6 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         TextField(
                           controller: _emailController,
+                          onChanged: (value) => setState(() => email = value),
                           style: const TextStyle(color: Colors.black),
                           decoration: InputDecoration(
                             fillColor: Colors.white70,
@@ -92,6 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextField(
                           controller: _passwordController,
                           style: const TextStyle(),
+                          onChanged: (value) => setState(() => {password = value}),
                           obscureText: true,
                           decoration: InputDecoration(
                             fillColor: Colors.white70,
